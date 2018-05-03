@@ -10,6 +10,7 @@
 ```
 git clone https://github.com/svarog-vlz/bfm1.git
 ```
+В директории blockchain выполнить
 ```
 npm i
 ```
