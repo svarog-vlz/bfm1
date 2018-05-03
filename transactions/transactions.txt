@@ -1,0 +1,8 @@
+https://rinkeby.etherscan.io/address/0x35a32e30dde6e7221be6e0a9c1321ee6c87e1eec - Кошелек, созданный в metamask.
+https://rinkeby.etherscan.io/tx/0x6a10f2e147f2c31cf995f6522aa1041070da46a69e98208d49ba95866d76e527 - транзакция из metamask в локальный кошелек ether-wallet. 
+https://rinkeby.etherscan.io/tx/0x6fbcd740fa979a9140bb8672915462243f94180c213fc108395f7daa0c951917 - транзакция из geth, как в примере.
+https://rinkeby.etherscan.io/tx/0x6fbcd740fa979a9140bb8672915462243f94180c213fc108395f7daa0c951917 - тразакция с хешем файла в поле data, через geth:
+
+eth.sendTransaction({from: eth.accounts[0], to: '0x35A32e30DDe6e7221Be6e0A9c1321Ee6c87E1eeC', data:'0x0b1c16b75b7df65e45985396ce3d12748fc26f9b1a26e7
+9d531f098dde1cc521'  gas: 40000, gasPrise: 4e9 })
+
