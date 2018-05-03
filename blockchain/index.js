@@ -9,7 +9,7 @@ var p2p_port = process.env.P2P_PORT || 6001;
 var initialPeers = process.env.PEERS ? process.env.PEERS.split(',') : [];
 
 var notice = false;
-//вызов с --notice, повзолит увидеть процес майнинга блока
+//вызов с --notice, позволит увидеть процесс майнинга блока
 if (process.argv[2] == "--notice") {
     notice = true;
 }
@@ -168,6 +168,7 @@ var isValidNewBlock = (newBlock, previousBlock) => {
     } else if(CryptoJS.SHA256(newBlock.nonce.toString() + newBlock.hash).toString().indexOf(difficulty)!== 0) {
         console.log('Invalid nonce: '+ newBlock.nonce + ', generateHash: ' + 
             CryptoJS.SHA256(newBlock.nonce.toString() + newBlock.hash).toString() + ',difficulty: ' + difficulty);
+        return false;
     }
     if (notice) console.log(`Block is valid`);
     return true;
